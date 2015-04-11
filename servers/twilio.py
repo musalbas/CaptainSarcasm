@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/reply', methods=['POST'])
 def reply():
-    sarcasm = evaluate.tweetscore(request.form['message'])
+    sarcasm = evaluate.tweetscore(request.form['Body'])
     if sarcasm <= 0:
         xml = "<Response></Response>"
     else:
