@@ -10,4 +10,4 @@ def api():
     return str(evaluate.tweetscore(request.form['message']))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=8002, host='0.0.0.0')
